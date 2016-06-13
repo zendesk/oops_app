@@ -1,0 +1,45 @@
+{
+  "app": {
+    "package": "oopsie",
+    "description": {
+      "value": "Cancel a ticket submission!",
+      "title": "app description"
+    },
+    "name": {
+      "value": "Oopsie!",
+      "title": "app name"
+    },
+    "parameters": {
+      "allow_agents_choose_timeout": {
+        "label": {
+          "value": "Allow each agent to select his own timeout to cancel a ticket submission",
+          "title": "This is the label for parameter: allow_agents_choose_timeout"
+        },
+        "helpText": {
+          "value": "Each agent can choose his own timeout if you enable this option, otherwise the timeout is set to 10 seconds for everyone.",
+          "title": "This is the help text for parameter: allow_agents_choose_timeout"
+        }
+      }
+    }
+  },
+
+  "cancelMessage": {
+    "value": "Cancel submission",
+    "title": "Link text for agent to cancel the submission to a ticket"
+  },
+
+  "cancelledMessage": {
+    "value": "Your ticket submission was cancelled",
+    "title": "Growl message for ticket submission failure, User requested"
+  },
+
+  "delaySecondsOptionLabel": {
+    "value": "Ticket submission delay seconds",
+    "title": "The label text for the delay seconds dropdown option"
+  },
+
+  "delaySecondsOptionOff": {
+    "value": "Off",
+    "title": "The option text for disable the delay function"
+  }
+}

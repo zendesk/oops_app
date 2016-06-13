@@ -1,0 +1,20 @@
+{
+  "name": "Oopsie!",
+  "author": {
+    "name": "Zendesk Labs",
+    "email": "zendesklabs@zendesk.com",
+    "url": "http://www.zendesk.com"
+  },
+  "defaultLocale": "en",
+  "private": false,
+  "location": "ticket_sidebar",
+  "version": "1.0",
+  "frameworkVersion": "1.0",
+  "parameters": [
+    {
+      "name": "allow_agents_choose_timeout",
+      "type": "checkbox",
+      "default": false
+    }
+  ]
+}

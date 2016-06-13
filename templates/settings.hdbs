@@ -1,0 +1,11 @@
+<div class='delay-settings'>
+  <span class='delay-settings-label'>{{t "delaySecondsOptionLabel"}}</span>
+  <select class='delay-settings-dropdown' data-zd-type="select_menu">
+    <option value="0">{{t "delaySecondsOptionOff"}}</option>
+    <option value="3">3</option>
+    <option value="5">5</option>
+    <option value="7">7</option>
+    <option value="10">10</option>
+  </select>
+</div>
+<div id='cancel-ticket-submit'></div>

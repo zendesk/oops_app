@@ -1,14 +1,14 @@
-# App name
+# Opps App
 
-[brief description of the app]
+[The Oops App prevents ticket submission and allows a quick review of comments before submitting the ticket to Zendesk]
 
 ### The following information is displayed:
 
-* info1
-* info2
-* info3
+* Modal popup with comment text
+* Modal includes an abort button to cancel submission
+* Dismissing the modal or waiting 10 seconds will not prevent submission
 
-Please submit bug reports to [Insert Link](). Pull requests are welcome.
+Please submit bug reports here in the Github Issues page. Pull requests are welcome.
 
 ### Screenshot(s):
-[put your screenshots down here.]
+![](http://i.imgur.com/9F78QXL.png)

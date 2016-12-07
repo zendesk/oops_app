@@ -50,8 +50,11 @@
         backdrop: true,
         keyboard: false
       });
+      var comment_text = this.comment().text();
+      this.$("p#message_to_save").append(comment_text);
       this.$('.cancel-ticket-submit').click(function(){
         self.cancel();
+        self.hide();
       });
       var tick = this.getDelay();
       // bail out if delay set to off

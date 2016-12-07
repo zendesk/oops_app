@@ -12,7 +12,7 @@
       'app.activated': 'init',
       'ticket.save': 'save',
       'ticket.submit.always': 'cleanTimer',
-      'click #cancel-ticket-submit': 'cancel',
+      'click .cancel-ticket-submit': 'cancel',
       'zd_ui_change .delay-settings-dropdown': 'updateSettings'
     },
 
@@ -43,12 +43,21 @@
     },
 
     save: function () {
+      var self = this;
+      this.switchTo('modal');
+      this.show();
+      this.$('.my_modal').modal({
+        backdrop: true,
+        keyboard: false
+      });
+      this.$('.cancel-ticket-submit').click(function(){
+        self.cancel();
+      });
       var tick = this.getDelay();
       // bail out if delay set to off
       if (tick <= 0) { return; }
 
       stopped = false;
-      services.notify(cancelMessage, 'alert', tick * 1000);
 
       return this.promise(function (done, fail) {
         tickTimer = setInterval(function () {

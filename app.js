@@ -77,12 +77,14 @@
         tickTimer = setInterval(function () {
           if (stopped) {
             clearInterval(tickTimer);
+            self.$(".my_modal").hide();
             fail(cancelledMessage);
           } else {
             tick--;
             self.$("#tick_timer").text(tick);
             if (tick === 0) {
               clearInterval(tickTimer);
+              self.$(".my_modal").hide();
               done();
             }
           }

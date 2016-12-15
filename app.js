@@ -43,7 +43,7 @@
     },
 
     save: function () {
-      var uses_rich_text = this.comment().useRichText()
+      var uses_rich_text = this.comment().useRichText();
       var comment_text;
       if (uses_rich_text) {
         var html_comment_text = this.comment().text();

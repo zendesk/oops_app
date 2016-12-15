@@ -78,6 +78,11 @@
           if (stopped) {
             clearInterval(tickTimer);
             self.$(".my_modal").hide();
+            if (self.setting('allow_agents_choose_timeout')) {
+              var delay = self.getDelay();
+              self.switchTo('settings');
+              self.$('.delay-settings-dropdown').zdSelectMenu('setValue', delay);
+            }
             fail(cancelledMessage);
           } else {
             tick--;
@@ -85,6 +90,11 @@
             if (tick === 0) {
               clearInterval(tickTimer);
               self.$(".my_modal").hide();
+              if (self.setting('allow_agents_choose_timeout')) {
+                var delay = self.getDelay();
+                self.switchTo('settings');
+                self.$('.delay-settings-dropdown').zdSelectMenu('setValue', delay);
+              }
               done();
             }
           }

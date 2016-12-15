@@ -43,10 +43,17 @@
     },
 
     save: function () {
-      var html_comment_text = this.comment().text();
-      var plain_text = this.$(html_comment_text).text();
+      var uses_rich_text = this.comment().useRichText()
+      var comment_text;
+      if (uses_rich_text) {
+        var html_comment_text = this.comment().text();
+        comment_text = this.$(html_comment_text).text();
+      }
+      else {
+        comment_text = this.comment().text();
+      }
 
-      if (plain_text.length < 1) {
+      if (comment_text.length < 1) {
         return true;
       }
 
@@ -57,7 +64,7 @@
         backdrop: false,
         keyboard: false
       });
-      this.$("p#message_to_save").append(html_comment_text);
+      this.$("p#message_to_save").append(comment_text);
       this.$('.cancel-ticket-submit').click(function(){
         self.cancel();
         self.init();

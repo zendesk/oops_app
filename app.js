@@ -43,18 +43,24 @@
     },
 
     save: function () {
+      var html_comment_text = this.comment().text();
+      var plain_text = this.$(html_comment_text).text();
+
+      if (plain_text.length < 1) {
+        return true;
+      }
+
       var self = this;
       this.switchTo('modal');
       this.show();
       this.$('.my_modal').modal({
-        backdrop: true,
+        backdrop: false,
         keyboard: false
       });
-      var comment_text = this.comment().text();
-      this.$("p#message_to_save").append(comment_text);
+      this.$("p#message_to_save").append(html_comment_text);
       this.$('.cancel-ticket-submit').click(function(){
         self.cancel();
-        self.hide();
+        self.init();
       });
       var tick = this.getDelay();
       // bail out if delay set to off

@@ -63,18 +63,24 @@
         self.init();
       });
       var tick = this.getDelay();
+      this.$("#tick_timer").text(tick);
       // bail out if delay set to off
       if (tick <= 0) { return; }
 
       stopped = false;
 
       return this.promise(function (done, fail) {
+        this.$('.save-ticket-submit').click(function(){
+          console.log('clicked save');
+          done();
+        });
         tickTimer = setInterval(function () {
           if (stopped) {
             clearInterval(tickTimer);
             fail(cancelledMessage);
           } else {
             tick--;
+            self.$("#tick_timer").text(tick);
             if (tick === 0) {
               clearInterval(tickTimer);
               done();

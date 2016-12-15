@@ -74,12 +74,12 @@
           console.log('clicked save');
           done();
         });
+        var delay = self.getDelay();
         tickTimer = setInterval(function () {
           if (stopped) {
             clearInterval(tickTimer);
             self.$(".my_modal").hide();
             if (self.setting('allow_agents_choose_timeout')) {
-              var delay = self.getDelay();
               self.switchTo('settings');
               self.$('.delay-settings-dropdown').zdSelectMenu('setValue', delay);
             }
@@ -91,7 +91,6 @@
               clearInterval(tickTimer);
               self.$(".my_modal").hide();
               if (self.setting('allow_agents_choose_timeout')) {
-                var delay = self.getDelay();
                 self.switchTo('settings');
                 self.$('.delay-settings-dropdown').zdSelectMenu('setValue', delay);
               }

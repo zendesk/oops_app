@@ -57,6 +57,10 @@
         return true;
       }
 
+      var tick = this.getDelay();
+      // bail out if delay set to off
+      if (tick <= 0) { return true; }
+
       var self = this;
       this.switchTo('modal');
       this.show();
@@ -69,10 +73,7 @@
         self.cancel();
         self.init();
       });
-      var tick = this.getDelay();
       this.$("#tick_timer").text(tick);
-      // bail out if delay set to off
-      if (tick <= 0) { return; }
 
       stopped = false;
 

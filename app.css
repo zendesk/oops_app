@@ -7,3 +7,12 @@
     float: left;
     margin-left: 10px;
 }
+
+#tick_timer {
+  color: red;
+  font-weight: 600;
+}
+
+p#timer_message {
+  float: left;
+}

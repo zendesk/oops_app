@@ -4,10 +4,12 @@
     <h3 class="my_modal_label">Modals</h3>
   </div>
   <div class="modal-body">
-      <h3> Your wrote the below message:</h3>
+      <h3> You wrote the below message:</h3>
       <p id="message_to_save"></p>
   </div>
   <div class="modal-footer">
+    <p id="timer_message">Time Remaining: &nbsp; &nbsp;<span id="tick_timer">10</span></p>
+    <button class="btn save-ticket-submit" data-dismiss="modal" aria-hidden="true">Save</button>
     <button class="btn cancel-ticket-submit" data-dismiss="modal" aria-hidden="true">Abort</button>
   </div>
 </div>

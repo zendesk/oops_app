@@ -1,4 +1,4 @@
-# Opps App
+# Oops App
 
 [The Oops App prevents ticket submission and allows a quick review of comments before submitting the ticket to Zendesk]
 
